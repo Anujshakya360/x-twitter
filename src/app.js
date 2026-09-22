@@ -32,8 +32,7 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads'), { maxAge:
 
 // Serve the frontend (index.html, login.html, css/, js/) from the backend root.
 // Dev convenience: same-origin means zero CORS friction while you build.
-app.use(express.static(path.join(__dirname, '../../')));
-
+app.use(express.static(path.join(__dirname, '../')));
 app.use('/api', routes);
 
 app.use(notFound);
